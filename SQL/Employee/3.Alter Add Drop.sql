@@ -1,5 +1,7 @@
 -- Active: 1685713185905@@localhost@3306@employee
 
+-- -- create database Super_Store;
+
 CREATE TABLE candidates (
     id INT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
@@ -41,6 +43,15 @@ DROP COLUMN linkedin_account;
 ALTER TABLE candidates
 DROP COLUMN phone,
 DROP COLUMN dob;
+
+-- To rename a column, you can use the RENAME COLUMN clause. The syntax is as follows:
+ALTER TABLE candidates
+RENAME COLUMN first_name TO fname;
+
+-- To rename a table, you can use the RENAME TO clause. The syntax is as follows:
+ALTER TABLE employees_demo
+RENAME TO staff_demo;
+
 
 -- Drop TABLE (name of the table);
 -- DROP DATABASE (name of the database);

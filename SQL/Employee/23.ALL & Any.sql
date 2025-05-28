@@ -1,3 +1,4 @@
+-- 
 SELECT 
     first_name, last_name, salary
 FROM
@@ -56,6 +57,3 @@ WHERE
         GROUP BY department_id)
 ORDER BY 
     salary; 
-    
-
-

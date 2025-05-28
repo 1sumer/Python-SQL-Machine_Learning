@@ -1,6 +1,6 @@
--- Active: 1685713185905@@localhost@3306@employee
+-- Active: 1746006268448@@127.0.0.1@3306@employee
 /* Creating Dtabases*/
--- create 	database Employee;
+create database Employee;
 
 /* Using Table*/
 use employee;

@@ -9,8 +9,18 @@
 
 -- 4.EXCEPT or MINUS (Also not supported in MySQL directly)
 
+/* ✅ Rules for Using Set Operations     
+- To use set operations, the SELECTs must:
+- Have the same number of columns.
+- Have compatible data types in corresponding positions.*/
+
 --  1. UNION
 -- Combines results from two queries and removes duplicates.
+
+-- Syntax:
+/*SELECT column1, column2 FROM table1
+UNION
+SELECT column1, column2 FROM table2;*/
 
 -- Countries in Europe or Asia
 SELECT country_name FROM countries WHERE region_id = 1
@@ -28,6 +38,14 @@ UNION
 SELECT city FROM locations WHERE country_id = 'CA';
 
 -- UNION ALL (keeps duplicates)
+-- Combines results from two queries and keeps duplicates.
+
+-- Syntax:
+/*SELECT column1, column2 FROM table1
+UNION ALL
+SELECT column1, column2 FROM table2;*/
+
+
 -- 1. Employees from department 60 and 100 (duplicates allowed)
 SELECT first_name FROM employees WHERE department_id = 60
 UNION ALL
@@ -50,5 +68,7 @@ SELECT manager_id FROM employees WHERE manager_id IS NOT NULL;
 
 
 -- INTERSECT (Not supported in MySQL — use INNER JOIN workaround)
+-- Combines results from two queries and returns only the rows that are present in both.
 
 -- EXCEPT / MINUS (Not supported in MySQL — use NOT IN or LEFT JOIN + NULL)
+-- Combines results from two queries and returns only the rows from the first query that are not present in the second.

@@ -1,0 +1,55 @@
+🧾 Scenario: Sales Data Analysis Using NumPy
+You are working as a data analyst for a chain of 10 retail stores. The company collected sales data for each store over the course of 30 days. The data is stored in a 10 x 30 NumPy array, where:
+
+Each row represents a store (Store 1 to Store 10),
+
+Each column represents a day (Day 1 to Day 30),
+
+Each element is the sales amount (in dollars) for that store on that day.
+
+❓ 15 Scenario-Based NumPy Questions
+1. Total Sales Per Store:
+Calculate the total sales for each store over the 30-day period.
+
+2. Total Sales Per Day:
+Calculate the total sales across all stores for each day.
+
+3. Overall Total Sales:
+Find the total sales made by all stores over the 30 days.
+
+4. Store with Highest Sales:
+Identify the store with the highest total sales.
+
+5. Day with Highest Sales:
+Find the day on which the company made the highest sales (across all stores).
+
+6. Average Daily Sales Per Store:
+Compute the average sales per day for each store.
+
+7. Average Sales Per Day (All Stores):
+Find the average total sales per day across all stores.
+
+8. Top 3 Performing Stores:
+List the top 3 stores based on total sales.
+
+9. Sales Above a Threshold:
+Count how many times any store had sales greater than $900.
+
+10. Sales Drop Detection:
+For each store, find the number of days where the sales dropped compared to the previous day.
+
+11. Day-on-Day Sales Growth (Store 5):
+Calculate the percentage change in sales day-over-day for Store 5.
+
+12. Standard Deviation of Sales (Per Store):
+Compute the standard deviation of sales for each store.
+
+13. Find Days with Zero Sales (Assume Sparse Data):
+Simulate that some data might be missing or zero — count total zero sales (if any).
+
+14. Normalize Sales Data (Min-Max):
+Normalize the entire sales array using min-max normalization.
+
+15. Moving Average (Window of 3 Days):
+For Store 1, calculate the 3-day moving average of sales.
+
