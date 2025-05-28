@@ -1,0 +1,3374 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Python Functions Tutorial</title>
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+body {
+
+
+font-family: 'Inter', sans-serif;
+
+
+}
+
+
+pre {
+
+
+white-space: pre-wrap;
+
+
+word-wrap: break-word;
+
+
+}
+
+
+.code-output {
+
+
+background-color: #f0f0f0;
+
+
+border-left: 4px solid #3b82f6;
+
+
+padding: 0.5rem 1rem;
+
+
+margin: 0.5rem 0;
+
+
+font-family: monospace;
+
+
+}
+
+
+.tab-content {
+
+
+display: none;
+
+
+}
+
+
+.tab-content.active {
+
+
+display: block;
+
+
+}
+
+
+.code-editor {
+
+
+font-family: monospace;
+
+
+resize: none;
+
+
+tab-size: 4;
+
+
+}
+
+
+.code-result {
+
+
+min-height: 100px;
+
+
+max-height: 200px;
+
+
+overflow-y: auto;
+
+
+}
+
+
+.function-card {
+
+
+transition: transform 0.2s;
+
+
+}
+
+
+.function-card:hover {
+
+
+transform: translateY(-5px);
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+
+
+<header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-8 px-4 shadow-lg">
+
+
+<div class="container mx-auto">
+
+
+<h1 class="text-4xl font-bold mb-2">Python Functions</h1>
+
+
+<p class="text-xl">A comprehensive guide to understanding and using functions in Python</p>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+<main class="container mx-auto py-8 px-4">
+
+
+<!-- Navigation Tabs -->
+
+
+<div class="flex flex-wrap mb-8 bg-white rounded-lg shadow-md overflow-hidden">
+
+
+<button id="tab-intro" class="tab-button px-4 py-3 font-medium text-blue-600 border-b-2 border-blue-600">Introduction</button>
+
+
+<button id="tab-types" class="tab-button px-4 py-3 font-medium text-gray-600">Types of Functions</button>
+
+
+<button id="tab-args" class="tab-button px-4 py-3 font-medium text-gray-600">Arguments</button>
+
+
+<button id="tab-lambda" class="tab-button px-4 py-3 font-medium text-gray-600">Lambda Functions</button>
+
+
+<button id="tab-map" class="tab-button px-4 py-3 font-medium text-gray-600">Map, Filter, Reduce</button>
+
+
+<button id="tab-scope" class="tab-button px-4 py-3 font-medium text-gray-600">Variable Scope</button>
+
+
+<button id="tab-practice" class="tab-button px-4 py-3 font-medium text-gray-600">Practice</button>
+
+
+<button id="tab-challenge" class="tab-button px-4 py-3 font-medium text-gray-600">Challenge</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- Introduction Tab -->
+
+
+<div id="content-intro" class="tab-content active bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">What are Functions?</h2>
+
+
+<p class="mb-4 text-gray-700">A function is a small re-usable snippet of code which is written to output the result of a specific task. When a given task has to be performed repeatedly, it's good to create a function for the task with specified inputs that can be recalled as needed.</p>
+
+
+
+
+
+
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+
+
+<h3 class="font-bold text-blue-800">Benefits of Functions:</h3>
+
+
+<ul class="list-disc ml-6 mt-2 text-gray-700">
+
+
+<li>Make your program look simple and organized</li>
+
+
+<li>Provide modularity: Break down complex problems into smaller, manageable parts</li>
+
+
+<li>Enable code reusability: Write once, use many times</li>
+
+
+<li>Improve readability and maintainability</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Basic Function Syntax</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-4 overflow-x-auto">
+
+
+def function_name(parameters):
+
+
+# Function body
+
+
+# Code to be executed
+
+
+return expression # Optional return statement
+
+
+</pre>
+
+
+
+
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Simple Function Example</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+def greet(name):
+
+
+"""This function returns a greeting for a given name."""
+
+
+return f"Hello, {name}!"
+
+
+
+
+
+
+# Calling the function
+
+
+result = greet("Python Learner")
+
+
+print(result)
+
+
+</pre>
+
+
+<div class="code-output">Hello, Python Learner!</div>
+
+
+
+
+
+
+<div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-500">
+
+
+<h3 class="font-bold text-yellow-800">Key Components:</h3>
+
+
+<ul class="list-disc ml-6 mt-2 text-gray-700">
+
+
+<li><strong>def keyword:</strong> Used to define a function</li>
+
+
+<li><strong>function_name:</strong> Name of the function (follows variable naming rules)</li>
+
+
+<li><strong>parameters:</strong> Input values the function can work with</li>
+
+
+<li><strong>function body:</strong> Indented block of code that executes when the function is called</li>
+
+
+<li><strong>return statement:</strong> Optional - sends a result back to the caller</li>
+
+
+<li><strong>docstring:</strong> Optional documentation string describing what the function does</li>
+
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Types of Functions Tab -->
+
+
+<div id="content-types" class="tab-content bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Types of Functions in Python</h2>
+
+
+
+
+
+
+<div class="grid md:grid-cols-2 gap-6 mb-8">
+
+
+<!-- User-defined Functions -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-blue-700">User-defined Functions</h3>
+
+
+<p class="mb-3 text-gray-700">Functions that you create yourself to perform specific tasks.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def square_it(number):
+
+
+return number ** 2
+
+
+
+
+
+
+result = square_it(5)
+
+
+print(result) # Output: 25
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+<!-- Built-in Functions -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-green-700">Built-in Functions</h3>
+
+
+<p class="mb-3 text-gray-700">Functions that are already available in Python.</p>
+
+
+<p class="mb-2 text-gray-600">Examples: <code>min()</code>, <code>max()</code>, <code>sum()</code>, <code>len()</code>, <code>pow()</code></p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+numbers = [1, 5, 3, 9, 2]
+
+
+print(max(numbers)) # Output: 9
+
+
+print(sum(numbers)) # Output: 20
+
+
+print(len(numbers)) # Output: 5
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Return vs Print</h3>
+
+
+<div class="grid md:grid-cols-2 gap-6">
+
+
+<!-- Return -->
+
+
+<div class="bg-blue-50 p-4 rounded-md">
+
+
+<h4 class="font-bold text-blue-800 mb-2">Return Statement</h4>
+
+
+<p class="mb-2 text-gray-700">Used to exit a function and pass a value back to the caller.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def div(numbers):
+
+
+for num in numbers:
+
+
+if num % 2 == 0:
+
+
+return f"{num} is divisible by 2"
+
+
+
+
+
+
+numbers = [1, 2, 3, 4, 5]
+
+
+result = div(numbers)
+
+
+print(result) # Output: "2 is divisible by 2"
+
+
+</pre>
+
+
+<p class="text-gray-600 text-sm">Note: The function stops executing after the first even number is found.</p>
+
+
+</div>
+
+
+
+
+
+
+<!-- Print -->
+
+
+<div class="bg-green-50 p-4 rounded-md">
+
+
+<h4 class="font-bold text-green-800 mb-2">Print Statement</h4>
+
+
+<p class="mb-2 text-gray-700">Used to display output to the console but doesn't affect function flow.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def div(numbers):
+
+
+for num in numbers:
+
+
+if num % 2 == 0:
+
+
+print(f"{num} is divisible by 2")
+
+
+
+
+
+
+numbers = [1, 2, 3, 4, 5]
+
+
+div(numbers)
+
+
+# Output:
+
+
+# 2 is divisible by 2
+
+
+# 4 is divisible by 2
+
+
+</pre>
+
+
+<p class="text-gray-600 text-sm">Note: The function continues executing through all numbers.</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mt-6 p-4 bg-purple-50 border-l-4 border-purple-500">
+
+
+<h3 class="font-bold text-purple-800">Docstrings</h3>
+
+
+<p class="mb-2 text-gray-700">Documentation strings that describe what a function does.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def square_list(numbers):
+
+
+"""
+
+
+This function returns the square of each number in a list.
+
+
+"""
+
+
+return [num ** 2 for num in numbers]
+
+
+
+
+
+
+# Access the docstring
+
+
+print(square_list.__doc__)
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+This function returns the square of each number in a list.
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Arguments Tab -->
+
+
+<div id="content-args" class="tab-content bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Function Arguments</h2>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Regular Arguments</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+def calculate_rectangle_area(length, width):
+
+
+area = length * width
+
+
+return area
+
+
+
+
+
+
+# Calling with positional arguments
+
+
+area1 = calculate_rectangle_area(5, 8)
+
+
+print(f"Area: {area1}")
+
+
+
+
+
+
+# Calling with keyword arguments
+
+
+area2 = calculate_rectangle_area(width=8, length=5)
+
+
+print(f"Area: {area2}")
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+Area: 40
+
+
+Area: 40
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+
+
+<!-- *args -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-blue-700">Arbitrary Arguments (*args)</h3>
+
+
+<p class="mb-3 text-gray-700">Used when you want to pass a variable number of positional arguments.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def sum_numbers(*args):
+
+
+return sum(args)
+
+
+
+
+
+
+# Call with any number of arguments
+
+
+print(sum_numbers(1, 2, 3))
+
+
+print(sum_numbers(1, 2, 3, 4, 5, 6))
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+6
+
+
+21
+
+
+</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Note: <code>*args</code> collects all positional arguments into a tuple.</p>
+
+
+</div>
+
+
+
+
+
+
+<!-- **kwargs -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-green-700">Keyword Arguments (**kwargs)</h3>
+
+
+<p class="mb-3 text-gray-700">Used when you want to pass a variable number of keyword arguments.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def display_info(**kwargs):
+
+
+for key, value in kwargs.items():
+
+
+print(f"{key}: {value}")
+
+
+
+
+
+
+# Call with any number of keyword arguments
+
+
+display_info(name="John", age=25, location="New York")
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+name: John
+
+
+age: 25
+
+
+location: New York
+
+
+</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Note: <code>**kwargs</code> collects all keyword arguments into a dictionary.</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="bg-yellow-50 p-4 rounded-md mb-6">
+
+
+<h3 class="font-bold text-yellow-800 mb-2">Example: Combining Different Types of Arguments</h3>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def concat(*args, sep="/"):
+
+
+return sep.join(args)
+
+
+
+
+
+
+# Using default separator
+
+
+print(concat("earth", "mars", "venus"))
+
+
+
+
+
+
+# Changing the separator
+
+
+print(concat("earth", "mars", "venus", sep="-"))
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+earth/mars/venus
+
+
+earth-mars-venus
+
+
+</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Note: Regular parameters can be combined with *args and **kwargs.</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="p-4 bg-indigo-50 border-l-4 border-indigo-500">
+
+
+<h3 class="font-bold text-indigo-800">Parameter Order</h3>
+
+
+<p class="text-gray-700">When defining a function with multiple parameter types, they must be in this order:</p>
+
+
+<ol class="list-decimal ml-6 mt-2 text-gray-700">
+
+
+<li>Regular parameters</li>
+
+
+<li>*args (arbitrary positional arguments)</li>
+
+
+<li>Default parameters</li>
+
+
+<li>**kwargs (arbitrary keyword arguments)</li>
+
+
+</ol>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Lambda Functions Tab -->
+
+
+<div id="content-lambda" class="tab-content bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Lambda Functions</h2>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<p class="mb-4 text-gray-700">Lambda functions are small, anonymous functions defined with the <code>lambda</code> keyword. They can have any number of arguments but only one expression.</p>
+
+
+
+
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Basic Syntax</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-4 overflow-x-auto">
+
+
+lambda arguments: expression
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+
+
+<!-- Simple Lambda -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-blue-700">Simple Lambda Function</h3>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+# Regular function
+
+
+def add(x, y):
+
+
+return x + y
+
+
+
+
+
+
+# Equivalent lambda function
+
+
+add_lambda = lambda x, y: x + y
+
+
+
+
+
+
+print(add(3, 5))
+
+
+print(add_lambda(3, 5))
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+8
+
+
+8
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Lambda with Conditionals -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-green-700">Lambda with Conditionals</h3>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+# Check if a number is even
+
+
+is_even = lambda x: x % 2 == 0
+
+
+
+
+
+
+print(is_even(4)) # True
+
+
+print(is_even(7)) # False
+
+
+
+
+
+
+# Ternary expression in lambda
+
+
+get_status = lambda x: "Even" if x % 2 == 0 else "Odd"
+
+
+print(get_status(4)) # "Even"
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+True
+
+
+False
+
+
+Even
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Lambda with List Comprehension</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+# Filter even numbers from a list
+
+
+even_filter = lambda x: [i for i in x if i % 2 == 0]
+
+
+
+
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+print(even_filter(numbers))
+
+
+</pre>
+
+
+<div class="code-output">[2, 4, 6, 8, 10]</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Lambda as Function Arguments</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+# Using lambda with max() function
+
+
+numbers = [100, 51, 14]
+
+
+print("Max number:", max(numbers))
+
+
+print("Max number modulo 5:", max(numbers, key=lambda x: x % 5))
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+Max number: 100
+
+
+Max number modulo 5: 14
+
+
+</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Note: The <code>key</code> parameter takes a function that determines how to compare the items.</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="p-4 bg-purple-50 border-l-4 border-purple-500">
+
+
+<h3 class="font-bold text-purple-800">When to Use Lambda Functions</h3>
+
+
+<ul class="list-disc ml-6 mt-2 text-gray-700">
+
+
+<li>For short, simple operations</li>
+
+
+<li>When you need a function for a short period</li>
+
+
+<li>As arguments to higher-order functions (like map, filter, reduce)</li>
+
+
+<li>For creating small, throwaway functions</li>
+
+
+</ul>
+
+
+<p class="mt-2 text-gray-600">For complex operations, regular functions with proper names and docstrings are more readable.</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Map, Filter, Reduce Tab -->
+
+
+<div id="content-map" class="tab-content bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Map, Filter, and Reduce Functions</h2>
+
+
+
+
+
+
+<div class="grid md:grid-cols-3 gap-6 mb-8">
+
+
+<!-- Map -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-blue-700">map()</h3>
+
+
+<p class="mb-3 text-gray-700">Applies a function to all items in an input list and returns a map object.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+# Syntax
+
+
+map(function, iterable)
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+<!-- Filter -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-green-700">filter()</h3>
+
+
+<p class="mb-3 text-gray-700">Filters elements based on a function that returns True or False.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+# Syntax
+
+
+filter(function, iterable)
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+<!-- Reduce -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-yellow-700">reduce()</h3>
+
+
+<p class="mb-3 text-gray-700">Applies a function cumulatively to reduce a sequence to a single value.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+# Syntax
+
+
+reduce(function, iterable[, initial])
+
+
+</pre>
+
+
+<p class="text-gray-600 text-sm">Note: Requires <code>from functools import reduce</code></p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Map Examples</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+# Example 1: Square each number in a list
+
+
+numbers = [1, 2, 3, 4, 5]
+
+
+squared = list(map(lambda x: x**2, numbers))
+
+
+print(squared) # [1, 4, 9, 16, 25]
+
+
+
+
+
+
+# Example 2: Using a defined function with map
+
+
+def double(x):
+
+
+return x * 2
+
+
+
+
+
+
+doubled = list(map(double, numbers))
+
+
+print(doubled) # [2, 4, 6, 8, 10]
+
+
+
+
+
+
+# Example 3: Using built-in functions with map
+
+
+import math
+
+
+sqrt_values = list(map(math.sqrt, [4, 9, 16, 25]))
+
+
+print(sqrt_values) # [2.0, 3.0, 4.0, 5.0]
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+[1, 4, 9, 16, 25]
+
+
+[2, 4, 6, 8, 10]
+
+
+[2.0, 3.0, 4.0, 5.0]
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Filter Examples</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+# Example 1: Filter even numbers
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+
+
+print(even_numbers) # [2, 4, 6, 8, 10]
+
+
+
+
+
+
+# Example 2: Filter positive numbers
+
+
+values = [-2, -1, 0, 1, 2, 3, 4, 5]
+
+
+positive_values = list(filter(lambda x: x > 0, values))
+
+
+print(positive_values) # [1, 2, 3, 4, 5]
+
+
+
+
+
+
+# Example 3: Filter words starting with 'A'
+
+
+words = ["Apple", "Banana", "Orange", "Avocado", "Grapes"]
+
+
+a_words = list(filter(lambda word: word.startswith('A'), words))
+
+
+print(a_words) # ['Apple', 'Avocado']
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+[2, 4, 6, 8, 10]
+
+
+[1, 2, 3, 4, 5]
+
+
+['Apple', 'Avocado']
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Reduce Examples</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+from functools import reduce
+
+
+
+
+
+
+# Example 1: Sum all numbers in a list
+
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+
+sum_result = reduce(lambda x, y: x + y, numbers)
+
+
+print(sum_result) # 21
+
+
+
+
+
+
+# Example 2: Find the maximum value
+
+
+values = [45, 67, 12, 89, 34]
+
+
+max_value = reduce(lambda x, y: x if x > y else y, values)
+
+
+print(max_value) # 89
+
+
+
+
+
+
+# Example 3: Multiply all numbers in a range
+
+
+def multiply(a, b):
+
+
+return a * b
+
+
+
+
+
+
+product = reduce(multiply, range(1, 8))
+
+
+print(product) # 5040 (factorial of 7)
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+21
+
+
+89
+
+
+5040
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="p-4 bg-indigo-50 border-l-4 border-indigo-500">
+
+
+<h3 class="font-bold text-indigo-800">Key Differences</h3>
+
+
+<ul class="list-disc ml-6 mt-2 text-gray-700">
+
+
+<li><strong>map():</strong> Transforms each element in an iterable</li>
+
+
+<li><strong>filter():</strong> Selects elements from an iterable based on a condition</li>
+
+
+<li><strong>reduce():</strong> Aggregates all elements in an iterable into a single value</li>
+
+
+</ul>
+
+
+<p class="mt-2 text-gray-600">These functions promote a functional programming style and can make your code more concise and readable.</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Variable Scope Tab -->
+
+
+<div id="content-scope" class="tab-content bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Variable Scope in Functions</h2>
+
+
+
+
+
+
+<div class="grid md:grid-cols-2 gap-6 mb-8">
+
+
+<!-- Local Variables -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-blue-700">Local Variables</h3>
+
+
+<p class="mb-3 text-gray-700">Variables defined inside a function that can only be accessed within that function.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+def my_function():
+
+
+x = 10 # Local variable
+
+
+print("Inside the function, x =", x)
+
+
+
+
+
+
+my_function()
+
+
+# print(x) # This would raise an error
+
+
+</pre>
+
+
+<div class="code-output">Inside the function, x = 10</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Local variables exist only while the function is being executed.</p>
+
+
+</div>
+
+
+
+
+
+
+<!-- Global Variables -->
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-md p-5 function-card">
+
+
+<h3 class="text-xl font-semibold mb-3 text-green-700">Global Variables</h3>
+
+
+<p class="mb-3 text-gray-700">Variables defined outside any function that can be accessed both inside and outside functions.</p>
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md mb-2 overflow-x-auto text-sm">
+
+
+y = 20 # Global variable
+
+
+
+
+
+
+def my_function():
+
+
+print("Inside the function, y =", y)
+
+
+
+
+
+
+my_function()
+
+
+print("Outside the function, y =", y)
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+Inside the function, y = 20
+
+
+Outside the function, y = 20
+
+
+</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Global variables exist as long as the program is running.</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Modifying Global Variables</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+z = 30 # Global variable
+
+
+
+
+
+
+def my_function():
+
+
+# This creates a new local variable z, not modifying the global one
+
+
+z = 40
+
+
+print("Inside the function, local z =", z)
+
+
+
+
+
+
+my_function()
+
+
+print("Outside the function, global z =", z) # Still 30
+
+
+
+
+
+
+def my_function_with_global():
+
+
+global z # Declare that we want to use the global z
+
+
+z = 40 # Now this modifies the global variable
+
+
+print("Inside the function, global z =", z)
+
+
+
+
+
+
+my_function_with_global()
+
+
+print("Outside the function, global z =", z) # Now 40
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+Inside the function, local z = 40
+
+
+Outside the function, global z = 30
+
+
+Inside the function, global z = 40
+
+
+Outside the function, global z = 40
+
+
+</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Use the <code>global</code> keyword to modify global variables inside a function.</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Nonlocal Variables</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+def outer_function():
+
+
+x = 5 # Variable in the enclosing scope
+
+
+
+
+
+
+def inner_function():
+
+
+# This would create a new local variable, not modify the outer one
+
+
+x = 10
+
+
+print("Inside inner function, local x =", x)
+
+
+
+
+
+
+inner_function()
+
+
+print("Inside outer function, x =", x) # Still 5
+
+
+
+
+
+
+def outer_function_with_nonlocal():
+
+
+x = 5 # Variable in the enclosing scope
+
+
+
+
+
+
+def inner_function():
+
+
+nonlocal x # Declare that we want to use the variable from the enclosing scope
+
+
+x = 10 # Now this modifies the variable in the outer function
+
+
+print("Inside inner function, nonlocal x =", x)
+
+
+
+
+
+
+inner_function()
+
+
+print("Inside outer function, x =", x) # Now 10
+
+
+
+
+
+
+outer_function()
+
+
+outer_function_with_nonlocal()
+
+
+</pre>
+
+
+<div class="code-output">
+
+
+Inside inner function, local x = 10
+
+
+Inside outer function, x = 5
+
+
+Inside inner function, nonlocal x = 10
+
+
+Inside outer function, x = 10
+
+
+</div>
+
+
+<p class="text-gray-600 text-sm mt-2">Use the <code>nonlocal</code> keyword to modify variables from the enclosing (non-global) scope.</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="p-4 bg-yellow-50 border-l-4 border-yellow-500">
+
+
+<h3 class="font-bold text-yellow-800">Variable Scope Resolution (LEGB Rule)</h3>
+
+
+<p class="mb-2 text-gray-700">Python follows the LEGB rule to determine the scope of a variable:</p>
+
+
+<ol class="list-decimal ml-6 mt-2 text-gray-700">
+
+
+<li><strong>L</strong>ocal: Variables defined within the function</li>
+
+
+<li><strong>E</strong>nclosing: Variables defined in the enclosing function</li>
+
+
+<li><strong>G</strong>lobal: Variables defined at the top level of the module</li>
+
+
+<li><strong>B</strong>uilt-in: Python's built-in names</li>
+
+
+</ol>
+
+
+<p class="mt-2 text-gray-600">Python searches for a variable in this order until it finds it.</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Practice Tab -->
+
+
+<div id="content-practice" class="tab-content bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Practice with Functions</h2>
+
+
+
+
+
+
+<div class="mb-8">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Interactive Code Editor</h3>
+
+
+<p class="mb-4 text-gray-700">Try writing and testing your own functions in the editor below:</p>
+
+
+
+
+
+
+<div class="border border-gray-300 rounded-lg overflow-hidden">
+
+
+<div class="bg-gray-100 px-4 py-2 border-b border-gray-300 flex justify-between items-center">
+
+
+<span class="font-medium text-gray-700">Python Code</span>
+
+
+<div>
+
+
+<button id="run-code" class="bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-md text-sm">Run Code</button>
+
+
+<button id="reset-code" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-1 rounded-md text-sm ml-2">Reset</button>
+
+
+</div>
+
+
+</div>
+
+
+<textarea id="code-editor" class="code-editor w-full p-4 bg-gray-800 text-white" rows="10">
+
+
+# Write your function here
+
+
+def greet(name):
+
+
+"""Returns a greeting message"""
+
+
+return f"Hello, {name}!"
+
+
+
+
+
+
+# Test your function
+
+
+result = greet("Python Learner")
+
+
+print(result)
+
+
+</textarea>
+
+
+<div class="bg-gray-100 px-4 py-2 border-t border-gray-300">
+
+
+<span class="font-medium text-gray-700">Output</span>
+
+
+</div>
+
+
+<div id="code-result" class="code-result bg-white p-4 border-t border-gray-300 text-gray-800">
+
+
+# Output will appear here
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Practice Exercises</h3>
+
+
+<div class="space-y-4">
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-sm p-4">
+
+
+<h4 class="font-semibold text-gray-800">Exercise 1: Calculate Area of a Rectangle</h4>
+
+
+<p class="text-gray-700 mb-2">Write a function that calculates the area of a rectangle.</p>
+
+
+<button class="show-solution bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm">Show Solution</button>
+
+
+<div class="solution hidden mt-3">
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md overflow-x-auto text-sm">
+
+
+def calculate_rectangle_area(length, width):
+
+
+area = length * width
+
+
+return area
+
+
+
+
+
+
+# Example Usage
+
+
+rectangle_area = calculate_rectangle_area(5, 8)
+
+
+print("Rectangle Area:", rectangle_area) # Output: 40
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-sm p-4">
+
+
+<h4 class="font-semibold text-gray-800">Exercise 2: Convert Celsius to Fahrenheit</h4>
+
+
+<p class="text-gray-700 mb-2">Write a function that converts temperature from Celsius to Fahrenheit.</p>
+
+
+<button class="show-solution bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm">Show Solution</button>
+
+
+<div class="solution hidden mt-3">
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md overflow-x-auto text-sm">
+
+
+def celsius_to_fahrenheit(celsius):
+
+
+fahrenheit = (celsius * 9/5) + 32
+
+
+return fahrenheit
+
+
+
+
+
+
+# Example Usage
+
+
+temperature_celsius = 30
+
+
+temperature_fahrenheit = celsius_to_fahrenheit(temperature_celsius)
+
+
+print(f"{temperature_celsius} Celsius is {temperature_fahrenheit} Fahrenheit") # Output: 30 Celsius is 86.0 Fahrenheit
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-sm p-4">
+
+
+<h4 class="font-semibold text-gray-800">Exercise 3: Check if a Number is Prime</h4>
+
+
+<p class="text-gray-700 mb-2">Write a function that checks if a number is prime.</p>
+
+
+<button class="show-solution bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm">Show Solution</button>
+
+
+<div class="solution hidden mt-3">
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md overflow-x-auto text-sm">
+
+
+def is_prime(number):
+
+
+if number < 2:
+
+
+return False
+
+
+for i in range(2, int(number**0.5) + 1):
+
+
+if number % i == 0:
+
+
+return False
+
+
+return True
+
+
+
+
+
+
+# Example Usage
+
+
+check_number = 13
+
+
+print(f"{check_number} is prime: {is_prime(check_number)}") # Output: 13 is prime: True
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-sm p-4">
+
+
+<h4 class="font-semibold text-gray-800">Exercise 4: Find the Factorial of a Number</h4>
+
+
+<p class="text-gray-700 mb-2">Write a function that calculates the factorial of a number using recursion.</p>
+
+
+<button class="show-solution bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm">Show Solution</button>
+
+
+<div class="solution hidden mt-3">
+
+
+<pre class="bg-gray-800 text-white p-3 rounded-md overflow-x-auto text-sm">
+
+
+def factorial(n):
+
+
+if n == 0:
+
+
+return 1
+
+
+else:
+
+
+return n * factorial(n - 1)
+
+
+
+
+
+
+# Example Usage
+
+
+print(factorial(5)) # Output: 120
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- Challenge Tab -->
+
+
+<div id="content-challenge" class="tab-content bg-white p-6 rounded-lg shadow-md mb-8">
+
+
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Function Challenge: Message Decoder</h2>
+
+
+
+
+
+
+<div class="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500">
+
+
+<h3 class="font-bold text-blue-800 mb-2">Challenge Description</h3>
+
+
+<p class="text-gray-700">You are given a dictionary that maps letters to numbers and a list of encoded messages. Your task is to write functions to encode and decode messages using this mapping.</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Letter to Number Mapping</h3>
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md mb-2 overflow-x-auto">
+
+
+letter_to_number = {
+
+
+'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10,
+
+
+'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19,
+
+
+'t': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26
+
+
+}
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Challenge 1: Encode Messages</h3>
+
+
+<p class="mb-3 text-gray-700">Write a function that takes a list of words and encodes each word using the letter-to-number mapping. Each letter should be converted to its corresponding number, and the numbers should be joined with hyphens.</p>
+
+
+
+
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-sm p-4 mb-4">
+
+
+<h4 class="font-semibold text-gray-800 mb-2">Example Input:</h4>
+
+
+<pre class="bg-gray-100 p-3 rounded-md overflow-x-auto text-sm">
+
+
+texts = [
+
+
+'hello',
+
+
+'world',
+
+
+'python',
+
+
+'functions'
+
+
+]
+
+
+</pre>
+
+
+
+
+
+
+<h4 class="font-semibold text-gray-800 mt-4 mb-2">Expected Output:</h4>
+
+
+<pre class="bg-gray-100 p-3 rounded-md overflow-x-auto text-sm">
+
+
+8-5-12-12-15
+
+
+23-15-18-12-4
+
+
+16-25-20-8-15-14
+
+
+6-21-14-3-20-9-15-14-19
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+<button id="show-encode-solution" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm">Show Solution</button>
+
+
+<div id="encode-solution" class="hidden mt-4">
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
+
+
+def text_to_numerical(text):
+
+
+numbers = []
+
+
+for char in text:
+
+
+lower_char = char.lower() # Convert the character to lowercase
+
+
+if lower_char in letter_to_number: # Check if the character is in the dictionary
+
+
+numbers.append(str(letter_to_number[lower_char])) # Get the corresponding number and add to the list
+
+
+return '-'.join(numbers) # Join the numbers with hyphens
+
+
+
+
+
+
+# Convert each text to its numerical representation
+
+
+encoded_messages = []
+
+
+for text in texts:
+
+
+encoded_message = text_to_numerical(text)
+
+
+encoded_messages.append(encoded_message)
+
+
+
+
+
+
+# Print the encoded messages
+
+
+for encoded in encoded_messages:
+
+
+print(encoded)
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-6">
+
+
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Challenge 2: Decode Messages</h3>
+
+
+<p class="mb-3 text-gray-700">Write a function that takes a list of encoded messages and decodes each message back to text. Each encoded message consists of numbers separated by hyphens, and each number corresponds to a letter.</p>
+
+
+
+
+
+
+<div class="bg-white rounded-lg border border-gray-200 shadow-sm p-4 mb-4">
+
+
+<h4 class="font-semibold text-gray-800 mb-2">Example Input:</h4>
+
+
+<pre class="bg-gray-100 p-3 rounded-md overflow-x-auto text-sm">
+
+
+encoded_messages = [
+
+
+'18-5-3-1-4',
+
+
+'2-5-20-12-5',
+
+
+'15-14-5-7-5-1',
+
+
+'23-8-1-20'
+
+
+]
+
+
+</pre>
+
+
+
+
+
+
+<h4 class="font-semibold text-gray-800 mt-4 mb-2">Expected Output:</h4>
+
+
+<pre class="bg-gray-100 p-3 rounded-md overflow-x-auto text-sm">
+
+
+recad
+
+
+betle
+
+
+onegea
+
+
+what
+
+
+</pre>
+
+
+</div>
+
+
+
+
+
+
+<button id="show-decode-solution" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm">Show Solution</button>
+
+
+<div id="decode-solution" class="hidden mt-4">
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
+
+
+def get_key(val):
+
+
+for key, value in letter_to_number.items():
+
+
+if val == value:
+
+
+return key
+
+
+return "" # Return empty string if value not found
+
+
+
+
+
+
+def decode_message(encoded_message):
+
+
+decoded = ""
+
+
+for num_str in encoded_message.split('-'):
+
+
+try:
+
+
+num = int(num_str)
+
+
+letter = get_key(num)
+
+
+decoded += letter
+
+
+except ValueError:
+
+
+# Skip if not a valid number
+
+
+pass
+
+
+return decoded
+
+
+
+
+
+
+# Decode each message
+
+
+decoded_messages = []
+
+
+for encoded in encoded_messages:
+
+
+decoded = decode_message(encoded)
+
+
+decoded_messages.append(decoded)
+
+
+
+
+
+
+# Print the decoded messages
+
+
+for decoded in decoded_messages:
+
+
+print(decoded)
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="p-4 bg-green-50 border-l-4 border-green-500">
+
+
+<h3 class="font-bold text-green-800">Challenge Bonus</h3>
+
+
+<p class="text-gray-700 mb-2">Create a more efficient solution by:</p>
+
+
+<ol class="list-decimal ml-6 mt-2 text-gray-700">
+
+
+<li>Creating a reverse mapping (number_to_letter) for faster decoding</li>
+
+
+<li>Using list comprehensions to make the code more concise</li>
+
+
+<li>Adding error handling for invalid characters or numbers</li>
+
+
+</ol>
+
+
+<button id="show-bonus-solution" class="mt-3 bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-md text-sm">Show Bonus Solution</button>
+
+
+<div id="bonus-solution" class="hidden mt-4">
+
+
+<pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
+
+
+# Create a reverse mapping for faster decoding
+
+
+number_to_letter = {v: k for k, v in letter_to_number.items()}
+
+
+
+
+
+
+def encode_text(text):
+
+
+"""Encode a text string to numbers separated by hyphens."""
+
+
+return '-'.join(str(letter_to_number.get(char.lower(), '')) for char in text if letter_to_number.get(char.lower(), ''))
+
+
+
+
+
+
+def decode_message(encoded):
+
+
+"""Decode a hyphen-separated string of numbers back to text."""
+
+
+try:
+
+
+return ''.join(number_to_letter.get(int(num), '') for num in encoded.split('-') if num.isdigit())
+
+
+except ValueError:
+
+
+return "Error: Invalid encoded message format"
+
+
+
+
+
+
+# Test the improved functions
+
+
+texts = ['hello', 'world', 'python', 'functions']
+
+
+encoded_list = [encode_text(text) for text in texts]
+
+
+print("Encoded messages:")
+
+
+for encoded in encoded_list:
+
+
+print(encoded)
+
+
+
+
+
+
+print("\nDecoded messages:")
+
+
+for encoded in encoded_list:
+
+
+print(decode_message(encoded))
+
+
+</pre>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+
+
+
+
+<footer class="bg-gray-800 text-white py-6 px-4">
+
+
+<div class="container mx-auto text-center">
+
+
+<p>Python Functions Tutorial - Created with Canva Code</p>
+
+
+<p class="text-gray-400 text-sm mt-2">© 2023 All rights reserved</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+<script>
+
+
+// Tab Navigation
+
+
+const tabButtons = document.querySelectorAll('.tab-button');
+
+
+const tabContents = document.querySelectorAll('.tab-content');
+
+
+
+
+
+
+tabButtons.forEach(button => {
+
+
+button.addEventListener('click', () => {
+
+
+// Remove active class from all buttons and contents
+
+
+tabButtons.forEach(btn => btn.classList.remove('border-blue-600', 'text-blue-600'));
+
+
+tabButtons.forEach(btn => btn.classList.add('text-gray-600'));
+
+
+tabContents.forEach(content => content.classList.remove('active'));
+
+
+
+
+
+
+// Add active class to clicked button and corresponding content
+
+
+button.classList.remove('text-gray-600');
+
+
+button.classList.add('border-b-2', 'border-blue-600', 'text-blue-600');
+
+
+
+
+
+
+const contentId = 'content-' + button.id.split('-')[1];
+
+
+document.getElementById(contentId).classList.add('active');
+
+
+});
+
+
+});
+
+
+
+
+
+
+// Show/Hide Solutions
+
+
+document.querySelectorAll('.show-solution').forEach(button => {
+
+
+button.addEventListener('click', () => {
+
+
+const solution = button.nextElementSibling;
+
+
+if (solution.classList.contains('hidden')) {
+
+
+solution.classList.remove('hidden');
+
+
+button.textContent = 'Hide Solution';
+
+
+} else {
+
+
+solution.classList.add('hidden');
+
+
+button.textContent = 'Show Solution';
+
+
+}
+
+
+});
+
+
+});
+
+
+
+
+
+
+// Challenge Solutions
+
+
+document.getElementById('show-encode-solution').addEventListener('click', function() {
+
+
+const solution = document.getElementById('encode-solution');
+
+
+if (solution.classList.contains('hidden')) {
+
+
+solution.classList.remove('hidden');
+
+
+this.textContent = 'Hide Solution';
+
+
+} else {
+
+
+solution.classList.add('hidden');
+
+
+this.textContent = 'Show Solution';
+
+
+}
+
+
+});
+
+
+
+
+
+
+document.getElementById('show-decode-solution').addEventListener('click', function() {
+
+
+const solution = document.getElementById('decode-solution');
+
+
+if (solution.classList.contains('hidden')) {
+
+
+solution.classList.remove('hidden');
+
+
+this.textContent = 'Hide Solution';
+
+
+} else {
+
+
+solution.classList.add('hidden');
+
+
+this.textContent = 'Show Solution';
+
+
+}
+
+
+});
+
+
+
+
+
+
+document.getElementById('show-bonus-solution').addEventListener('click', function() {
+
+
+const solution = document.getElementById('bonus-solution');
+
+
+if (solution.classList.contains('hidden')) {
+
+
+solution.classList.remove('hidden');
+
+
+this.textContent = 'Hide Bonus Solution';
+
+
+} else {
+
+
+solution.classList.add('hidden');
+
+
+this.textContent = 'Show Bonus Solution';
+
+
+}
+
+
+});
+
+
+
+
+
+
+// Code Editor
+
+
+const codeEditor = document.getElementById('code-editor');
+
+
+const codeResult = document.getElementById('code-result');
+
+
+const runButton = document.getElementById('run-code');
+
+
+const resetButton = document.getElementById('reset-code');
+
+
+
+
+
+
+// Store the initial code
+
+
+const initialCode = codeEditor.value;
+
+
+
+
+
+
+runButton.addEventListener('click', () => {
+
+
+codeResult.innerHTML = "Running code...<br>";
+
+
+
+
+
+
+// Simulate Python execution (in a real environment, this would execute the code)
+
+
+setTimeout(() => {
+
+
+const code = codeEditor.value;
+
+
+let output = "";
+
+
+
+
+
+
+try {
+
+
+// Simple simulation of Python execution for demonstration
+
+
+if (code.includes('greet("Python Learner")')) {
+
+
+output = "Hello, Python Learner!";
+
+
+} else if (code.includes('factorial')) {
+
+
+const match = code.match(/factorial\((\d+)\)/);
+
+
+if (match && match[1]) {
+
+
+const n = parseInt(match[1]);
+
+
+let result = 1;
+
+
+for (let i = 2; i <= n; i++) {
+
+
+result *= i;
+
+
+}
+
+
+output = result.toString();
+
+
+}
+
+
+} else if (code.includes('calculate_rectangle_area')) {
+
+
+const match = code.match(/calculate_rectangle_area\((\d+),\s*(\d+)\)/);
+
+
+if (match && match[1] && match[2]) {
+
+
+const length = parseInt(match[1]);
+
+
+const width = parseInt(match[2]);
+
+
+output = `Rectangle Area: ${length * width}`;
+
+
+}
+
+
+} else if (code.includes('celsius_to_fahrenheit')) {
+
+
+const match = code.match(/celsius_to_fahrenheit\((\d+)\)/);
+
+
+if (match && match[1]) {
+
+
+const celsius = parseInt(match[1]);
+
+
+const fahrenheit = (celsius * 9/5) + 32;
+
+
+output = `${celsius} Celsius is ${fahrenheit} Fahrenheit`;
+
+
+}
+
+
+} else if (code.includes('is_prime')) {
+
+
+const match = code.match(/is_prime\((\d+)\)/);
+
+
+if (match && match[1]) {
+
+
+const num = parseInt(match[1]);
+
+
+let isPrime = num > 1;
+
+
+for (let i = 2; i <= Math.sqrt(num); i++) {
+
+
+if (num % i === 0) {
+
+
+isPrime = false;
+
+
+break;
+
+
+}
+
+
+}
+
+
+output = isPrime ? `${num} is prime: True` : `${num} is prime: False`;
+
+
+}
+
+
+} else {
+
+
+output = "Code executed successfully, but no specific output detected.";
+
+
+}
+
+
+} catch (error) {
+
+
+output = `Error: ${error.message}`;
+
+
+}
+
+
+
+
+
+
+codeResult.innerHTML = output;
+
+
+}, 500);
+
+
+});
+
+
+
+
+
+
+resetButton.addEventListener('click', () => {
+
+
+codeEditor.value = initialCode;
+
+
+codeResult.innerHTML = "# Output will appear here";
+
+
+});
+
+
+</script>
+
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'946c6e6490663d22',t:'MTc0ODQyMTQ1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+
+</html>
