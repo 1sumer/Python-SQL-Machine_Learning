@@ -1,0 +1,3 @@
+# accounts.py
+
+accounts = {}
