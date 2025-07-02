@@ -1,0 +1,8 @@
+pip install {library name} - installing the library 
+pip show {library name} - description about the library
+pip list - know the libraries in the venv
+pip freeze > requirements.txt - storing the libraries as a prerqisite
+pytho -V or python --version - know the version of the venv
+
+myenv\Scripts\activate - activating the venv
+deactivate - deactivating venv
