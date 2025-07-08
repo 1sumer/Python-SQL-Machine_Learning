@@ -1,0 +1,4 @@
+Python is a Interpeter Language
+Python is High level Language
+Python is Dynamic Language
+Python is Supports Oops Principle

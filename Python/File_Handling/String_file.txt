@@ -1,0 +1,10 @@
+test@example.com
+123-456-7890
+Start this string
+This string ends with End
+123456
+Contains whitespace 
+pretest and posttest
+@#!$%
+5This does not start with a digit
+NoWhitespaceHere
