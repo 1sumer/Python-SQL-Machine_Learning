@@ -60,6 +60,7 @@ This repository contains a comprehensive set of SQL scripts organized to help yo
 ### [**SQL_books**](./SQL_Books/)
 
 Reference materials or notes based on popular Python books.
+
 ---
 
 ## How to Use

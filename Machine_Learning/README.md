@@ -47,7 +47,7 @@ This repository provides a detailed collection of Python scripts and notebooks f
    * Gini index and entropy
    * Pruning and avoiding overfitting
 
-6. [**Random Forest**](./Random Forest/)
+6. [**Random Forest**](./Random%20Forest/)
 
    * Ensemble learning with decision trees
    * Bagging technique
