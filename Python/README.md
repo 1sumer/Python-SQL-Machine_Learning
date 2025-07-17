@@ -103,7 +103,3 @@ Data visualization using libraries like Matplotlib, Seaborn, and Plotly.
 * [Python Documentation](https://docs.python.org/3/)
 * [Jupyter](https://jupyter.org/)
 * [Real Python](https://realpython.com/)
-
----
-
-Would you like me to generate the folder icons or a visual directory tree diagram too?
