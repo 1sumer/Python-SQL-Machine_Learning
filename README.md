@@ -13,7 +13,7 @@ This repository contains a comprehensive collection of Python, SQL, and Machine 
 
 ---
 
-## 🐍 [`python/`](./python)
+## 🐍 [`python`](./Python)
 
 Each level contains standalone `.py` files covering:
 
@@ -31,7 +31,7 @@ Each level contains standalone `.py` files covering:
 
 ---
 
-## 🗃️ [`sql/`](./sql)
+## 🗃️ [`sql`](./SQL)
 
 Scripts are written in standard SQL (MySQL/PostgreSQL compatible):
 
