@@ -13,7 +13,7 @@ This repository contains a comprehensive collection of Python, SQL, and Machine 
 
 ---
 
-## 🐍 Python Scripts [`python/`](./python)
+## 🐍 [`python/`](./python)
 
 Each level contains standalone `.py` files covering:
 
@@ -31,7 +31,7 @@ Each level contains standalone `.py` files covering:
 
 ---
 
-## 🗃️ SQL Scripts [`sql/`](./sql)
+## 🗃️ [`sql/`](./sql)
 
 Scripts are written in standard SQL (MySQL/PostgreSQL compatible):
 
@@ -49,7 +49,7 @@ Scripts are written in standard SQL (MySQL/PostgreSQL compatible):
 
 ---
 
-## 🤖 Machine Learning Scripts [`ml/`](./ml)
+## 🤖 [`Machine Learning/`](./Machine_Learning/)
 
 Comprehensive implementations of key ML algorithms with clean, well-commented Python code:
 

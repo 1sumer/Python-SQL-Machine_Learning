@@ -1,10 +1,4 @@
-Thanks for sharing the image! Based on your Python folder structure, it looks like you're organizing your learning materials by topic (e.g., EDA, Numpy, Pandas) and foundational notebooks like loops, functions, file handling, etc.
-
-Here's a **matching README structure** for your `Python/` folder that explains each section and follows the same clean documentation format as your machine learning repo:
-
----
-
-# Python Learning Repository
+# Python Repository
 
 ## Overview
 
@@ -23,37 +17,19 @@ This repository provides a well-organized collection of Python notebooks to help
 
 Daily learning challenge to build consistent Python skills over 30 days.
 
-### [**EDA**](./EDA/)
+### **Python_Fundamentals**
 
-Exploratory Data Analysis techniques using Pandas, Matplotlib, and Seaborn.
+- #### 
+- #### [***Keyword_Identifier_Veriable_Operator**](./2.Python_K_I_V_O.ipynb)
+- #### [**Data Types**](./3.Data%20Type%20and%20Stucture.ipynb)
+- #### [**Statements**](./4.Conditional_Statements.ipynb)
+- #### [**Loops**](./5.Loops.ipynb)
+- #### [**Functions**](./6.Functions.ipynb)
+- #### [**File Handling**](./7.File_handle.ipynb)
+- #### [**Exception Handling**](./8.Exception%20Handling.ipynb)
+- #### [**Regular Expression**](./10.RegEx.ipynb)
+- #### [**OOP's**](./Oops.ipynb)
 
-### [**File_Handling**](./File_Handling/)
-
-Scripts and notebooks demonstrating file reading, writing, and manipulation (`.txt`, `.csv`, etc.).
-
-### [**Model_Creation**](./Model_Creation/)
-
-Introductory content related to building simple ML models using Python libraries.
-
-### [**Numpy**](./Numpy/)
-
-Hands-on examples for array operations, broadcasting, and numerical computations using NumPy.
-
-### [**Pandas**](./Pandas/)
-
-Working with Series and DataFrames — loading, cleaning, transforming, and analyzing data.
-
-### **Python_books**
-
-Reference materials or notes based on popular Python books.
-
-### [**Visualization**](./Visualization/)
-
-Data visualization using libraries like Matplotlib, Seaborn, and Plotly.
-
----
-
-## 📓 Jupyter Notebooks
 
 | **Notebook**                     | **Description**                                                |
 | -------------------------------- | -------------------------------------------------------------- |
@@ -68,6 +44,37 @@ Data visualization using libraries like Matplotlib, Seaborn, and Plotly.
 | `10.RegEx.ipynb`                 | Regular expressions for string matching and pattern finding    |
 | `Oops.ipynb`                     | Object-Oriented Programming: classes, objects, inheritance     |
 | `Python Basics.ipynb`            | Combined recap or general practice of fundamental concepts     |
+
+   
+
+### [**Model_Creation**](./Model_Creation/)
+
+Introductory content related to building simple ML models using Python libraries.
+
+### [**File_Handling**](./File_Handling/)
+
+Scripts and notebooks demonstrating file reading, writing, and manipulation (`.txt`, `.csv`, etc.).
+
+### [**Numpy**](./Numpy/)
+
+Hands-on examples for array operations, broadcasting, and numerical computations using NumPy.
+
+### [**Pandas**](./Pandas/)
+
+Working with Series and DataFrames — loading, cleaning, transforming, and analyzing data.
+
+
+### [**Visualization**](./Visualization/)
+
+Data visualization using libraries like Matplotlib, Seaborn, and Plotly.
+
+### [**EDA**](./EDA/)
+
+Exploratory Data Analysis techniques using Pandas, Matplotlib, and Seaborn.
+
+### [**Python_books**](./Python_books/)
+
+Reference materials or notes based on popular Python books.
 
 ---
 
