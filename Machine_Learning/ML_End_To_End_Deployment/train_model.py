@@ -1,5 +1,4 @@
 import pandas as pd
-import statsmodels.api as sm
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
@@ -29,4 +28,4 @@ print(f"Mean Squared Error (MSE): {mse:.2f}")
 print(f"R-squared (R²): {r2:.4f}")
 
 # Save the model using joblib
-#joblib.dump(model, 'linear_regression_model.pkl')
+joblib.dump(model, 'linear_regression_model.pkl')

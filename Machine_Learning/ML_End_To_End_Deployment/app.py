@@ -1,11 +1,11 @@
 from flask import Flask, request, render_template
 import numpy as np
-import pickle
+import joblib
 
 app = Flask(__name__)
 
 # Load the trained model (ensure model.pkl exists)
-model = pickle.load(open('model.pkl', 'rb'))
+model = joblib.load(open('linear_regression_model.pkl', 'rb'))
 
 @app.route('/')
 def home():
