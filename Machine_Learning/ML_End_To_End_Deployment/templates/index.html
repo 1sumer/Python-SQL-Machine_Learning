@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happiness Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Happiness Predictor</h1>
+        <form action="/predict" method="post">
+            <label for="income">Enter Income:</label>
+            <input type="number" step="any" name="income" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <p class="result">{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
