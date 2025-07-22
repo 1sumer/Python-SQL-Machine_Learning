@@ -71,7 +71,7 @@ This repository provides a detailed collection of Python scripts and notebooks f
    * Handling missing values and regularization
    * High performance for structured/tabular data
 
-10. [**K-Means Clustering**](./K-Means_Clustering/)
+10. [**K-Means Clustering**](./Kmeans/)
 
     * Centroid initialization and optimization
     * Elbow method for determining the number of clusters
@@ -83,7 +83,7 @@ This repository provides a detailed collection of Python scripts and notebooks f
     * Covariance matrix, eigenvalues, eigenvectors
     * Explained variance and scree plot visualization
 
-12. [**Recommendation Systems**](./Recommendation/)
+12. [**Recommendation Systems**](./Recommender System/)
 
     * Content-based filtering
     * Collaborative filtering
