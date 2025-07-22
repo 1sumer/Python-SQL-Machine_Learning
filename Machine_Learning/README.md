@@ -83,7 +83,7 @@ This repository provides a detailed collection of Python scripts and notebooks f
     * Covariance matrix, eigenvalues, eigenvectors
     * Explained variance and scree plot visualization
 
-12. [**Recommendation Systems**](./Recommender System/)
+12. [**Recommendation Systems**](./Recommender System)
 
     * Content-based filtering
     * Collaborative filtering
