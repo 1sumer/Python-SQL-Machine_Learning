@@ -19,31 +19,20 @@ Daily learning challenge to build consistent Python skills over 30 days.
 
 ### **Python_Fundamentals**
 
-- #### 
-- #### [***Keyword_Identifier_Veriable_Operator**](./2.Python_K_I_V_O.ipynb)
-- #### [**Data Types**](./3.Data%20Type%20and%20Stucture.ipynb)
-- #### [**Statements**](./4.Conditional_Statements.ipynb)
-- #### [**Loops**](./5.Loops.ipynb)
-- #### [**Functions**](./6.Functions.ipynb)
-- #### [**File Handling**](./7.File_handle.ipynb)
-- #### [**Exception Handling**](./8.Exception%20Handling.ipynb)
-- #### [**Regular Expression**](./10.RegEx.ipynb)
-- #### [**OOP's**](./Oops.ipynb)
-
-
 | **Notebook**                     | **Description**                                                |
 | -------------------------------- | -------------------------------------------------------------- |
-| `1.Python Intoduction.ipynb`     | Basics of Python: syntax, variables, comments, etc.            |
-| `2.Python_K_I_V_O.ipynb`         | Keywords, Identifiers, Variables, and Operators                |
-| `3.Data Type and Stucture.ipynb` | Numbers, strings, lists, tuples, sets, and dictionaries        |
-| `4.Conditional_Statements.ipynb` | `if`, `elif`, `else` conditions                                |
-| `5.Loops.ipynb`                  | `for` and `while` loops, `break`, `continue`                   |
-| `6.Functions.ipynb`              | Defining and calling functions, arguments, `*args`, `**kwargs` |
-| `7.File_handle.ipynb`            | Reading and writing files in Python                            |
-| `8.Exception Handling.ipynb`     | Try/except blocks, common exceptions                           |
-| `10.RegEx.ipynb`                 | Regular expressions for string matching and pattern finding    |
-| `Oops.ipynb`                     | Object-Oriented Programming: classes, objects, inheritance     |
+| `1. Python Intoduction.ipynb`     | Basics of Python: syntax, variables, comments, etc.            |
+| `2. Python_K_I_V_O.ipynb`         | Keywords, Identifiers, Variables, and Operators                |
+| `3. Data Type and Stucture.ipynb` | Numbers, strings, lists, tuples, sets, and dictionaries        |
+| `4. Conditional_Statements.ipynb` | `if`, `elif`, `else` conditions                                |
+| `5. Loops.ipynb`                  | `for` and `while` loops, `break`, `continue`                   |
+| `6. Functions.ipynb`              | Defining and calling functions, arguments, `*args`, `**kwargs` |
+| `7. File_handle.ipynb`            | Reading and writing files in Python                            |
+| `8. Exception Handling.ipynb`     | Try/except blocks, common exceptions                           |
+| `9. RegEx.ipynb`                 | Regular expressions for string matching and pattern finding    |
+| `10. Oops.ipynb`                     | Object-Oriented Programming: classes, objects, inheritance     |
 | `Python Basics.ipynb`            | Combined recap or general practice of fundamental concepts     |
+| `Exception Handling_RegEx_Oop's.ipynb` | Combined recap or general practice of fundamental concepts     |
 
    
 
