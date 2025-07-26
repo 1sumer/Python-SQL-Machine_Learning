@@ -68,8 +68,6 @@
 | **Scikit-Learn** | Python     | General-purpose ML (easy API)        |
 | **TensorFlow**   | Python     | Deep learning, production-ready      |
 | **PyTorch**      | Python     | Research & deep learning flexibility |
-| **XGBoost**      | Python/C++ | Gradient boosting for tabular data   |
-| **LightGBM**     | Python/C++ | Fast gradient boosting               |
 | **Keras**        | Python     | High-level wrapper for TensorFlow    |
 | **MLflow**       | Python     | Model lifecycle management           |
 
