@@ -121,6 +121,7 @@
 | `dropna()`            | Drop missing      | `df.dropna()`          |
 | `duplicated()`        | Detect duplicates | `df.duplicated()`      |
 | `drop_duplicates()`   | Remove duplicates | `df.drop_duplicates()` |
+| `drop()`              | Remove Columns    | `df.drop()`            |
 
 ---
 
