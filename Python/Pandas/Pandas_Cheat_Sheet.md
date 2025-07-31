@@ -155,6 +155,7 @@
 | `value_counts()`    | Frequency of values | `df['col'].value_counts()` |
 | `nlargest(n, col)`  | Top `n` largest     | `df.nlargest(5, 'col')`    |
 | `nsmallest(n, col)` | Top `n` smallest    | `df.nsmallest(5, 'col')`   |
+| `groupby()`         | Grouping            | `df.groupby().agg({})`     |
 
 ---
 
