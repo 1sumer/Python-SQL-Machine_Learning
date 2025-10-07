@@ -82,6 +82,18 @@ Comprehensive implementations of key ML algorithms with clean, well-commented Py
 
 ---
 
+## 🤖 [`Power_BI/`](./Machine_Learning/)
+
+Comprehensive implementations of Power BI Dashboards:
+
+### 🧠 Power_BI DashBoard
+
+- Population Analysis  
+- HR Data Analysis    
+- Financial Analysis  
+
+---
+
 ## 📢 Contributions
 
 Feel free to fork the repo, add your own scripts, and make pull requests!  
